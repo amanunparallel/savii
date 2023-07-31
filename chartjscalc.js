@@ -1,23 +1,22 @@
 // Fetch Chart js from jsdelivr first.
-
 const piectx = document.querySelector("[calc='chart']");
 
 if (piectx) {
-  let loanAmountTrack = document.querySelector("[calc='loan-amount']");
-  let rateTrack = document.querySelector("[calc='rate']");
-  let timeTrack = document.querySelector("[calc='time']");
+  var loanAmountTrack = document.querySelector("[calc='loan-amount']");
+  var rateTrack = document.querySelector("[calc='rate']");
+  var timeTrack = document.querySelector("[calc='time']");
 
-  let loanAmountText = document.querySelector("[calc='text-loan-amount']");
-  let rateText = document.querySelector("[calc='text-rate']");
-  let timeText = document.querySelector("[calc='text-time']");
-  let emiText = document.querySelector("[calc='emi']");
-  let interestText = document.querySelector("[calc='interest-amount']");
+  var loanAmountText = document.querySelector("[calc='text-loan-amount']");
+  var rateText = document.querySelector("[calc='text-rate']");
+  var timeText = document.querySelector("[calc='text-time']");
+  var emiText = document.querySelector("[calc='emi']");
+  var interestText = document.querySelector("[calc='interest-amount']");
 
   // Default values
-  let defaultAmount = 100000;
-  let defaultRate = 2;
-  let defaultTime = 48;
-  let thresholdRate = 3.6;
+  var defaultAmount = 100000;
+  var defaultRate = 2;
+  var defaultTime = 48;
+  var thresholdRate = 3.6;
 
   loanAmountTrack.value = defaultAmount;
   rateTrack.value = defaultRate;
@@ -27,13 +26,13 @@ if (piectx) {
   timeText.textContent = defaultTime;
 
   // Variables for calculations
-  let p = Number(defaultAmount); // principal amount
-  let r = Number(defaultRate) / 100 / 12; // rate of interest per month
-  let ntime = Number(defaultTime); // time in months
+  var p = Number(defaultAmount); // principal amount
+  var r = Number(defaultRate) / 100 / 12; // rate of interest per month
+  var ntime = Number(defaultTime); // time in months
 
   // Calculate EMI and Interest
-  let emi;
-  let totalInterest;
+  var emi;
+  var totalInterest;
 
   function calcEmi() {
     emi = (p * r * Math.pow(1 + r, ntime)) / (Math.pow(1 + r, ntime) - 1);
@@ -125,14 +124,14 @@ if (piectx) {
 
   // Colors Change
 
-  let legendInterest = document.querySelector("[calc=legend-interest]");
-  let legendPrincipal = document.querySelector("[calc=legend-principal]");
-  let pieHeader = document.querySelector(".piechart-calculator--bottom--top");
-  let pieFooter = document.querySelector(".piechart-calculator--bottom");
-  let offerTag = document.querySelector("[calc=offer]");
-  let offerTagText = offerTag.querySelector("p");
+  var legendInterest = document.querySelector("[calc=legend-interest]");
+  var legendPrincipal = document.querySelector("[calc=legend-principal]");
+  var pieHeader = document.querySelector(".piechart-calculator--bottom--top");
+  var pieFooter = document.querySelector(".piechart-calculator--bottom");
+  var offerTag = document.querySelector("[calc=offer]");
+  var offerTagText = offerTag.querySelector("p");
 
-  let star = document.querySelector("[calc=star]");
+  var star = document.querySelector("[calc=star]");
 
   console.log(legendPrincipal, legendInterest);
 
