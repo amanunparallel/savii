@@ -139,8 +139,6 @@ if (piectx) {
 
   var star = document.querySelector("[calc=star]");
 
-  console.log(legendPrincipal, legendInterest);
-
   function ColorChange() {
     legendInterest.style.backgroundColor =
       rateTrack.value < thresholdRate ? "#7FA708" : "#DF5258";
@@ -158,7 +156,7 @@ if (piectx) {
     offerTag.style.color =
       rateTrack.value < thresholdRate ? "#748806" : "#DF5258";
     offerTagText.textContent =
-      rateTrack.value < thresholdRate ? "SAVII offers" : "Others offers";
+      rateTrack.value < thresholdRate ? "SAVII offers" : "Other offers";
   }
 
   ColorChange();
