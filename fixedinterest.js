@@ -15,7 +15,7 @@ if (piectx) {
   // Default values
   var defaultAmount = 100000;
   var defaultRate = 2;
-  var defaultTime = 48;
+  var defaultTime = 12;
   var thresholdRate = 3.6;
 
   loanAmountTrack.value = defaultAmount;
